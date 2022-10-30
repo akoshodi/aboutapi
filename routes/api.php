@@ -19,8 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/profiles', function () {
-   $data = Profile::select('slackUsername', 'backend','age','bio')->get();
-   return response()->json( $data );
+Route::get('/profiles', function () {   
+   $data = Profile::all('slackUsername', 'backend','age','bio')->first();
+   
+   return $data->toJson();
    
 });
