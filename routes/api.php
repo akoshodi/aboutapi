@@ -20,6 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/profiles', function () {
-   return Profile::select('slackUsername', 'backend','age','bio')
-       ->get();
+   $data = Profile::select('slackUsername', 'backend','age','bio')->get();
+   return response()->json( $data );
+   
 });
