@@ -22,6 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/profiles', function () {   
    $data = Profile::all('slackUsername', 'backend','age','bio')->first();
    
-   return $data->toJson();
+   //return $data->toJson();
+   return response($data, 200)
+   	->header('Content-Type', 'application/json');
    
 });
