@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Profile;
+use App\Http\Controllers\ProfileApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/profile', function () {   
-   $data = Profile::all('slackUsername', 'backend','age','bio')->first();
-   
-   return response($data, 200)
-   	->header('Content-Type', 'application/json');
-   
-});
+Route::get('/profile', [ProfileApiController::class, 'index']);
