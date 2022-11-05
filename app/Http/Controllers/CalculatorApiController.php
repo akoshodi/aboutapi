@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 class CalculatorApiController extends Controller
 {
     public function calculate(Request $request)
-    {
-        $input = json_encode($request->all());
+    {        
         $data = [];          
         
         if ($request->get('operation_type') == 'addition'){
