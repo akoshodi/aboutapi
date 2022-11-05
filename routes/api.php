@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileApiController;
+use App\Http\Controllers\CalculatorApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/profile', [ProfileApiController::class, 'index']);
+
+Route::post('/calculate', [CalculatorApiController::class, 'calculate']);
