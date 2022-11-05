@@ -79,7 +79,24 @@ Use Laravel's **artisan serve** command to start PHP's built-in development serv
 ```
 GET /api/profile
 ```
+Sample response
+```
+{ 
+    "slackUsername": "hnguser", 
+    "backend": true, 
+    "age": 30, 
+    "bio": "Backend developer" 
+}
+```
 ### [Task 02](/hng9_tasks/task02.md)
 ```
 POST /api/calculate
+```
+Sample response
+```
+{
+    “slackUsername”: "hnguser", 
+    “result”: 54, 
+    “operation_type”: "addition" 
+}
 ```
