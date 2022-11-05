@@ -1,9 +1,7 @@
 # HNG9 Tasks
 
 
-## Built With
-
-[Laravel](https://laravel.com/)
+## Built With [Laravel](https://laravel.com/)
 
 Getting Started
 To get a local copy up and running follow these simple  steps.

@@ -1,6 +1,8 @@
 Backend Stage 2 Task
+
 :bulb: Study Material
 [REST API TUTORIAL](https://www.gravitee.io/blog/rest-api-tutorial)
+
 :bulb: Task Description
 - Using the same server setup from stage one
 - Create an (POST) api endoint that takes the following sample json:
@@ -25,6 +27,7 @@ Use the slack command ``` /grade ``` along with your hosted URL. If it passes/fa
 ``` /grade https://yoururl.com ```
 
 :bulb: Deadline: Saturday 5th Nov 2022 - 11:59PM WAT
+
 :bulb::bulb: Bonus
 We will send in a random string to the "operation_type" field . This string will be an operation written in words, for example “Can you please add the following numbers together - 13 and 25.”
 
