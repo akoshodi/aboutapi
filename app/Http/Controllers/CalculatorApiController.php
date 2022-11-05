@@ -10,14 +10,19 @@ class CalculatorApiController extends Controller
     {        
         $data = [];          
         
-        if ($request->get('operation_type') == 'addition'){
-            $result = $request->get('x') + $request->get('y');            
-        } elseif ($request->get('operation_type') == 'substration'){
-            $result = $request->get('x') - $request->get('y');                
-        } else {
-            $result = $request->get('x') * $request->get('y');
-        }
+        if (strtolower($request->get('operation_type')) == 'addition'){
 
+            $result = $request->get('x') + $request->get('y'); 
+
+        } elseif (strtolower($request->get('operation_type')) == 'substration'){
+
+            $result = $request->get('x') - $request->get('y');    
+
+        } else {
+
+            $result = $request->get('x') * $request->get('y');
+
+        }
         
         $data['slackUsername'] = 'akoshodi'; 
         $data['result'] = (int) $result; 
