@@ -14,7 +14,7 @@ class CalculatorApiController extends Controller
 
             $result = $request->get('x') + $request->get('y'); 
 
-        } elseif (strtolower($request->get('operation_type')) == 'substration'){
+        } elseif (strtolower($request->get('operation_type')) == 'subtraction'){
 
             $result = $request->get('x') - $request->get('y');    
 
@@ -26,7 +26,7 @@ class CalculatorApiController extends Controller
         
         $data['slackUsername'] = 'akoshodi'; 
         $data['result'] = (int) $result; 
-        $data['operation_type'] = $request->get('operation_type'); 
+        $data['operation_type'] = strtolower($request->get('operation_type')); 
            
 
         return response($data, 200)
